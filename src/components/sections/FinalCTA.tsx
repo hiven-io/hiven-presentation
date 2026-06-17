@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { DownloadButton } from "@/components/ui/DownloadButton";
+import { ApkQrButton } from "./ApkQrButton";
 
 export function FinalCTA() {
   return (
@@ -45,7 +46,7 @@ export function FinalCTA() {
           transition={{ delay: 0.3, duration: 0.5 }}
           className="mt-4"
         >
-          <DownloadButton store="apk" />
+          <ApkQrButton />
         </motion.div>
 
         <motion.p
