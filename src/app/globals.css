@@ -1,26 +1,127 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-elevated: var(--elevated);
+  --color-soft: var(--soft);
+  --color-dark: var(--dark);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-brand: var(--brand);
+  --color-brand-orange: var(--brand-orange);
+  --color-wash: var(--wash);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+  --color-text-on-brand: var(--text-on-brand);
+  --color-text-on-dark: var(--text-on-dark);
+  --color-success: #16A34A;
+  --color-gold: #E0A92E;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root {
+  --bg: #FAF7F5;
+  --surface: #F2ECE9;
+  --elevated: #FEFCFB;
+  --soft: #F7F2EF;
+  --dark: #2A2422;
+  --border: #EAE2DD;
+  --border-strong: #D9CFC9;
+  --brand: #BE123C;
+  --brand-orange: #F97316;
+  --wash: #F7E4E9;
+  --text-primary: #2A2320;
+  --text-secondary: #6E625C;
+  --text-tertiary: #A99E98;
+  --text-on-brand: #FFF8F5;
+  --text-on-dark: #F4ECE8;
+  --shadow-color: #2A2320;
+  --hero-from: #FAF7F5;
+  --hero-to: #F2ECE9;
+  --map-base: #E8E0DA;
+  --map-to: #D9CFC9;
+  --scrim: #140006;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  :root:not([data-theme="light"]) {
+    --bg: #1A1614;
+    --surface: #2A2422;
+    --elevated: #332D2A;
+    --soft: #26201E;
+    --dark: #000000;
+    --border: #3D3633;
+    --border-strong: #4D4541;
+    --text-primary: #F4ECE8;
+    --text-secondary: #A99E98;
+    --text-tertiary: #6E625C;
+    --text-on-dark: #F4ECE8;
+    --shadow-color: #000000;
+    --hero-from: #1A1614;
+    --hero-to: #2A2422;
+    --map-base: #2A2422;
+    --map-to: #3D3633;
+    --scrim: #000000;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+:root[data-theme="dark"] {
+  --bg: #1A1614;
+  --surface: #2A2422;
+  --elevated: #332D2A;
+  --soft: #26201E;
+  --dark: #000000;
+  --border: #3D3633;
+  --border-strong: #4D4541;
+  --text-primary: #F4ECE8;
+  --text-secondary: #A99E98;
+  --text-tertiary: #6E625C;
+  --text-on-dark: #F4ECE8;
+  --shadow-color: #000000;
+  --hero-from: #1A1614;
+  --hero-to: #2A2422;
+  --map-base: #2A2422;
+  --map-to: #3D3633;
+  --scrim: #000000;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  body {
+    background-color: var(--bg);
+    color: var(--text-primary);
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+  ::selection { background-color: var(--brand); color: var(--text-on-brand); }
+}
+
+@layer utilities {
+  .gradient-brand { background-image: linear-gradient(135deg, var(--brand), var(--brand-orange)); }
+  .gradient-hero { background-image: linear-gradient(180deg, var(--hero-from), var(--hero-to)); }
+  .gradient-scrim { background-image: linear-gradient(180deg, transparent 40%, var(--scrim) 100%); }
+  .shadow-sm { box-shadow: 0 1px 2px 0 color-mix(in srgb, var(--shadow-color) 6%, transparent); }
+  .shadow-md { box-shadow: 0 4px 8px 0 color-mix(in srgb, var(--shadow-color) 10%, transparent); }
+  .shadow-lg { box-shadow: 0 8px 24px 0 color-mix(in srgb, var(--shadow-color) 12%, transparent); }
+  .shadow-card { box-shadow: 0 2px 8px 0 color-mix(in srgb, var(--shadow-color) 8%, transparent); }
+  .glass {
+    background-color: color-mix(in srgb, var(--elevated) 72%, transparent);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid color-mix(in srgb, var(--border) 50%, transparent);
+  }
+  .text-gradient { -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 }
