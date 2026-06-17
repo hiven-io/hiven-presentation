@@ -4,7 +4,7 @@ import { useEffect, useRef, useCallback } from "react";
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { MapPin, Crosshair } from "@/lib/phosphor";
-import { experiences, categoryGradients } from "@/config/site";
+import { experiences } from "@/config/site";
 import type { Map as MapboxMap } from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
@@ -225,10 +225,18 @@ export function LiveMap() {
                 key={exp.id}
                 className="flex-shrink-0 w-56 rounded-xl overflow-hidden glass shadow-sm"
               >
-                <div
-                  className="w-full h-24"
-                  style={{ background: categoryGradients[exp.categoryColor] ?? "var(--surface)" }}
-                />
+                {exp.image ? (
+                  <img
+                    src={exp.image}
+                    alt={exp.title}
+                    className="w-full h-24 object-cover"
+                  />
+                ) : (
+                  <div
+                    className="w-full h-24"
+                    style={{ backgroundColor: exp.categoryColor }}
+                  />
+                )}
                 <div className="p-2.5">
                   <div className="flex items-center gap-1">
                     <span

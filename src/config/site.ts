@@ -37,12 +37,12 @@ export const steps = [
 ];
 
 export const images = {
-  jazz: "",
-  pasta: "",
-  gallery: "",
-  trail: "",
-  rooftop: "",
-  cafe: "",
+  jazz: "https://images.unsplash.com/photo-1511192336575-5a79af67a629?w=600&h=400&fit=crop",
+  pasta: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=600&h=400&fit=crop",
+  gallery: "https://images.unsplash.com/photo-1531243269054-5ebf6f34081e?w=600&h=400&fit=crop",
+  trail: "https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&h=400&fit=crop",
+  rooftop: "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?w=600&h=400&fit=crop",
+  cafe: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&h=400&fit=crop",
   avatar1: "",
   avatar2: "",
   avatar3: "",
