@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   keywords: [
     "Hiven", "experiências urbanas", "rede social", "descoberta",
-    "eventos", "cidade", "roles", "São Paulo", "mapa social", "avaliações",
+    "eventos", "cidade", "roles", "Belo Horizonte", "mapa social", "avaliações",
   ],
   openGraph: {
     title: `${siteConfig.name} — ${siteConfig.tagline}`,
