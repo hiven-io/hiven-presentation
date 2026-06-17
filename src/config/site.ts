@@ -37,12 +37,12 @@ export const steps = [
 ];
 
 export const images = {
-  jazz: "https://picsum.photos/seed/samba/600/400",
-  pasta: "https://picsum.photos/seed/pasta/600/400",
-  gallery: "https://picsum.photos/seed/gallery/600/400",
-  trail: "https://picsum.photos/seed/trail/600/400",
-  rooftop: "https://picsum.photos/seed/rooftop/600/400",
-  cafe: "https://picsum.photos/seed/cafe/600/400",
+  jazz: "",
+  pasta: "",
+  gallery: "",
+  trail: "",
+  rooftop: "",
+  cafe: "",
   avatar1: "",
   avatar2: "",
   avatar3: "",

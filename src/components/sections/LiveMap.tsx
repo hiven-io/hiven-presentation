@@ -233,8 +233,8 @@ export function LiveMap() {
                   />
                 ) : (
                   <div
-                    className="w-full h-24"
-                    style={{ backgroundColor: exp.categoryColor }}
+                    className="w-full h-10"
+                    style={{ background: `linear-gradient(135deg, ${exp.categoryColor}, ${exp.categoryColor}88)` }}
                   />
                 )}
                 <div className="p-2.5">
