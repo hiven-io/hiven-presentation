@@ -131,7 +131,7 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="relative flex justify-center lg:justify-end"
+            className="relative flex justify-center lg:justify-end mt-12 sm:mt-16 lg:mt-0"
           >
             <HeroCards />
           </motion.div>
