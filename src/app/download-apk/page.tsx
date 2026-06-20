@@ -56,6 +56,18 @@ export default function DownloadApk() {
                   </svg>
                   Baixar APK
                 </a>
+                <a
+                  href="https://expo.dev/accounts/danielcalebe/projects/hiven/builds/68c9138a-491a-4c1b-83b8-12fd13d2d0ca"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 h-11 px-5 rounded-full font-semibold text-[14px] transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] border border-[var(--border)] bg-[var(--soft)] text-text-primary hover:bg-[var(--elevated)]"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 16v-8m0 0l-3 3m3-3l3 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M4 20h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  Download Alternativo
+                </a>
               </div>
             </div>
             <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-gradient-to-br from-[var(--brand)] to-[var(--brand-orange)] flex items-center justify-center">
