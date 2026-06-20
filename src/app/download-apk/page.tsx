@@ -70,7 +70,7 @@ export default function DownloadApk() {
               </div>
             </div>
             <div className="flex-shrink-0 w-16 h-16 rounded-2xl overflow-hidden">
-              <img src="/favicon.png" alt="Hiven" className="w-full h-full object-contain" />
+              <img src="/hiven-presentation/favicon.png" alt="Hiven" className="w-full h-full object-contain" />
             </div>
           </div>
         </div>
