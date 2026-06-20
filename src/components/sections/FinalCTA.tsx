@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { DownloadButton } from "@/components/ui/DownloadButton";
-import { ApkQrButton } from "./ApkQrButton";
+import { Download } from "@/lib/phosphor";
 
 export function FinalCTA() {
   return (
@@ -35,18 +34,18 @@ export function FinalCTA() {
           transition={{ delay: 0.15, duration: 0.6 }}
           className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <DownloadButton store="google-play" />
-          <DownloadButton store="app-store" />
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.5 }}
-          className="mt-4"
-        >
-          <ApkQrButton />
+          <a
+            href="https://expo.dev/accounts/danielcalebe/projects/hiven/builds/68c9138a-491a-4c1b-83b8-12fd13d2d0ca"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 h-14 px-6 rounded-full font-semibold text-[15px] transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] gradient-brand text-text-on-brand shadow-lg"
+          >
+            <Download size={20} weight="bold" />
+            <span className="flex flex-col items-start leading-tight">
+              <span className="text-[9px] font-normal opacity-70 uppercase tracking-wider">Download</span>
+              <span>APK Android</span>
+            </span>
+          </a>
         </motion.div>
 
         <motion.p
