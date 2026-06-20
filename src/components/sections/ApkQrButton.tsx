@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { QRCodeSVG } from "qrcode.react";
 import { Download } from "@/lib/phosphor";
 
-const APK_URL = "https://github.com/hiven-io/hiven-app/releases/download/v0.1.0/hiven-0.1.0.apk";
+const APK_URL = "https://hiven-io.github.io/hiven-presentation/download-apk/";
 
 function useThemeColor() {
   const [color, setColor] = useState("#2A2320");
@@ -48,7 +48,7 @@ export function ApkQrButton() {
 
   const handleClick = () => {
     if (isMobile) {
-      window.location.href = "https://github.com/hiven-io/hiven-app/releases/download/v0.1.0/hiven-0.1.0.apk";
+      window.location.href = "/hiven-presentation/download-apk/";
     } else {
       setShowQr((v) => !v);
     }
