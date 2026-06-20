@@ -69,8 +69,8 @@ export default function DownloadApk() {
                 </a>
               </div>
             </div>
-            <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-gradient-to-br from-[var(--brand)] to-[var(--brand-orange)] flex items-center justify-center">
-              <span className="text-2xl font-bold text-white">H</span>
+            <div className="flex-shrink-0 w-16 h-16 rounded-2xl overflow-hidden">
+              <img src="/favicon.png" alt="Hiven" className="w-full h-full object-contain" />
             </div>
           </div>
         </div>
