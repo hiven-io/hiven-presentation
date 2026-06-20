@@ -45,9 +45,8 @@ export default function DownloadApk() {
               <p className="text-[14px] text-text-secondary mb-4">Requer Android 8.0 ou superior</p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <a
-                  href="https://expo.dev/accounts/danielcalebe/projects/hiven/builds/68c9138a-491a-4c1b-83b8-12fd13d2d0ca"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="https://github.com/hiven-io/hiven-presentation/releases/download/v0.1.0/hiven-0.1.0.apk"
+                  download
                   className="inline-flex items-center gap-2 h-11 px-5 rounded-full font-semibold text-[14px] transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] gradient-brand text-text-on-brand shadow-lg"
                 >
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
